@@ -17,6 +17,19 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="id_category">Category</label>
+                        <select class="form-control" id="id_category" name="id_category">
+
+                            <option value="">No category selected</option>
+
+                            @foreach ($categories as $category)
+                                <option value="{{$category->id}}">{{ $category->name }}</option>        
+                            @endforeach
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label for="content">Post Content</label>
                         <textarea class="form-control" id="content" rows="10" name="content">{{ old('content') }}</textarea>
                     </div>

@@ -13,6 +13,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Title</th>
                         <th scope="col">Content</th>
+                        <th scope="col">Categories</th>
                         <th scope="col">Slug</th>
                         <th scope="col">Actions</th>
                       </tr>
@@ -23,6 +24,7 @@
                                 <td>{{$post->id}}</td>
                                 <td>{{$post->title}}</td>
                                 <td>{{substr($post->content, 0, 30)}}</td>
+                                <td>{{$post->category->name}}</td>
                                 <td>{{$post->slug}}</td>
                                 <td>
                                     <a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-primary m-1">View</a>
