@@ -9,6 +9,7 @@
 
             <div><strong>Title: </strong> {{$post->title}}</div>
                 <div><strong>Content: </strong> {!! $post->content !!}</div>
+                <div><strong>Category: </strong> {{$post->category->name}}</div>
                 <div><strong>Slug: </strong> {{$post->slug}}</div>
             </div>
 

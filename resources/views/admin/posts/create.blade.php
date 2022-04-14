@@ -17,13 +17,13 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="id_category">Category</label>
-                        <select class="form-control" id="id_category" name="id_category">
+                        <label for="category_id">Category</label>
+                        <select class="form-control" id="category_id" name="category_id">
 
                             <option value="">No category selected</option>
 
                             @foreach ($categories as $category)
-                                <option value="{{$category->id}}">{{ $category->name }}</option>        
+                                <option {{ old('category_id') == $category->id ? 'selected' : '' }} value="{{$category->id}}">{{ $category->name }}</option>        
                             @endforeach
 
                         </select>

@@ -24,7 +24,7 @@
                                 <td>{{$post->id}}</td>
                                 <td>{{$post->title}}</td>
                                 <td>{{substr($post->content, 0, 30)}}</td>
-                                <td>{{$post->category->name}}</td>
+                                <td>{{isset($post->category)?$post->category->name:'N.D.'}}</td>
                                 <td>{{$post->slug}}</td>
                                 <td>
                                     <a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-primary m-1">View</a>

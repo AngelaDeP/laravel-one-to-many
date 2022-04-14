@@ -18,6 +18,19 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="category_id">Category</label>
+                        <select class="form-control" id="category_id" name="category_id">
+
+                            <option value="">No category selected</option>
+
+                            @foreach ($categories as $category)
+                                <option {{ (old('category_id', $post->category_id) == $category->id) ? 'selected': ''}} value="{{$category->id}}">{{ $category->name }}</option>        
+                            @endforeach
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label for="content">Post Content</label>
                         <textarea class="form-control" id="content" rows="10" name="content">{{ old('content', $post->content) }}</textarea>
                     </div>
